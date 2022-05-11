@@ -11,7 +11,6 @@ struct ContentView: View {
     var body: some View {
         TabView {
             CatalogoView()
-                .badge(10)
                 .tabItem {
                     Image(systemName: "binoculars")
                     Text("Descobrir")
