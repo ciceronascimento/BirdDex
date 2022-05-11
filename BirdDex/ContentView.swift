@@ -16,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "binoculars")
                     Text("Descobrir")
                 }
-            Text("Quem é esse pokemon view")
+            Text("Que passaro é esse")
                 .tabItem {
                     Image(systemName: "questionmark.circle")
                     Text("Que animal é esse?")

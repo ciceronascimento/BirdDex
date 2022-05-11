@@ -7,14 +7,32 @@
 
 import SwiftUI
 
+
+
 struct CardAnimalView: View {
+    
+    
+    var imagemFundo:String
+  
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack{
+            Image(imagemFundo)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+        }
+        .cornerRadius(20)
+        .padding([.top, .horizontal])
+        Spacer()
     }
 }
 
+
 struct CardAnimalView_Previews: PreviewProvider {
     static var previews: some View {
-        CardAnimalView()
+        CardAnimalView(imagemFundo: "testeBackground")
     }
 }
