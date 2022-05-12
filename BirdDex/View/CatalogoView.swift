@@ -33,7 +33,7 @@ struct CatalogoView: View {
             }
             .navigationTitle("Descobrir")
             .navigationBarTitleDisplayMode(.automatic)
-            .searchable(text: $busca, placement: .navigationBarDrawer(displayMode: .always))
+            .searchable(text: $busca)
             
         }
     }
