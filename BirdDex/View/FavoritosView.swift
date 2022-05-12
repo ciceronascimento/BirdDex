@@ -9,7 +9,18 @@ import SwiftUI
 
 struct FavoritosView: View {
     var body: some View {
-        Text("Favoritos")
+        
+//        Text("Favoritos")
+        NavigationView{
+            
+            VStack{
+                Button("Teste"){
+                    NavigationLink(destination: PerfilPassaroView()){
+                        Text("oi")
+                    }
+                }
+            }
+        }
     }
 }
 

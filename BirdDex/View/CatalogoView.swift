@@ -27,6 +27,7 @@ struct CatalogoView: View {
                     
                     ForEach(passaros, id: \.self) { passaro in
                         CardAnimalView(imagemPassaro: passaro)
+                            
                     }
     
                 }

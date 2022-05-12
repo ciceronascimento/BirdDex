@@ -11,5 +11,7 @@ import Foundation
 struct Passaro {
     let id: Int
     let nome: String
-    let tipo: String
+    let nomeImagem: String
+    let caracteristica: Caracteristica
+    let habitat: Habitat
 }

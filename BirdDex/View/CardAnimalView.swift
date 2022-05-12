@@ -13,6 +13,7 @@ struct CardAnimalView: View {
     
     
 //    var imagemFundo:String
+
     var imagemPassaro:String
     @State private var selectedMaterial:Material = .regularMaterial
  
@@ -28,8 +29,20 @@ struct CardAnimalView: View {
                     .padding(.top)
                     .padding(.leading)
                 
-                HStack{
-                Text("tipo")
+                HStack(alignment: .bottom){
+                    Text("tipo2")
+                        .font(.subheadline).bold()
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.white.opacity(0.25))
+                        )
+//                        .frame(width: 100, height: 24)
+                }
+                HStack(){
+                    Text("tipo")
                         .font(.subheadline).bold()
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
@@ -44,6 +57,11 @@ struct CardAnimalView: View {
                         .scaledToFit()
                         .frame(width: 68, height: 68)
                         .padding([.bottom, .trailing], 4)
+                        .overlay(
+                            Circle()
+                                .scale(1.4, anchor: .center)
+                                .fill(Color.white.opacity(0.25))
+                        )
                 }
             }
             
@@ -66,6 +84,7 @@ struct CardAnimalView: View {
 //            }
         }
         .background(Color.cyan)
+//        .background(habitat.color)
         .cornerRadius(12)
         .shadow(radius: 10)
         .padding(.bottom)
