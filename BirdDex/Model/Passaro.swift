@@ -8,10 +8,10 @@
 import Foundation
 
 
-struct Passaro {
+struct Passaro: Hashable {
     let id: Int
     let nome: String
     let nomeImagem: String
-    let caracteristica: Caracteristica
+//    let caracteristica: Caracteristica
     let habitat: Habitat
 }

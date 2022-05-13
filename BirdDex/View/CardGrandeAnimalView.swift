@@ -1,33 +1,28 @@
 //
-//  CardAnimalView.swift
+//  CardGrandeAnimalView.swift
 //  BirdDex
 //
-//  Created by Cicero Nascimento on 11/05/22.
+//  Created by Cicero Nascimento on 13/05/22.
 //
 
 import SwiftUI
 
-
-
-struct CardAnimalView: View {
+struct CardGrandeAnimalView: View {
     
-    
-//    var imagemFundo:String
-    var passaro: Passaro
-    
-//    var id:Int
-//    var nome:String
-//    var nomeImagem:String
-//    var caracteristica:String
-////    var caracteristica:Caracteristica
-//    var habitat:Habitat
-    
-    @State private var selectedMaterial:Material = .regularMaterial
-    @Binding var showingSheet: Bool
-
-    
-    var body: some View {
+    //    var imagemFundo:String
+        var passaro: Passaro
         
+    //    var id:Int
+    //    var nome:String
+    //    var nomeImagem:String
+    //    var caracteristica:String
+    ////    var caracteristica:Caracteristica
+    //    var habitat:Habitat
+        
+        @State private var selectedMaterial:Material = .regularMaterial
+        @Binding var showingSheet: Bool
+
+    var body: some View {
         Button {
             self.showingSheet = true
         } label: {
@@ -93,10 +88,10 @@ struct CardAnimalView: View {
     }
 }
 
-
-//struct CardAnimalView_Previews: PreviewProvider {
+//struct CardGrandeAnimalView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        CardAnimalView(passaro: Passaro)
-//            .previewLayout(.sizeThatFits)
+//        var passaro:PassarosService
+//        var showwingSheet = false
+//        CardGrandeAnimalView(passaro: passaro.passaros[1], ShowingSheet: showwingSheet)
 //    }
 //}

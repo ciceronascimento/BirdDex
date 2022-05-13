@@ -18,6 +18,8 @@
 		DD6268FA282D318E00781CEF /* Habitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268F9282D318E00781CEF /* Habitat.swift */; };
 		DD6268FC282D33F700781CEF /* Caracteristica.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268FB282D33F700781CEF /* Caracteristica.swift */; };
 		DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268FE282D44A300781CEF /* SwiftUIView.swift */; };
+		DD626902282E814200781CEF /* PassarosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD626901282E814200781CEF /* PassarosService.swift */; };
+		DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */; };
 		DDEA7847282C867900F958F0 /* Passaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA7846282C867900F958F0 /* Passaro.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		DD6268F9282D318E00781CEF /* Habitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habitat.swift; sourceTree = "<group>"; };
 		DD6268FB282D33F700781CEF /* Caracteristica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caracteristica.swift; sourceTree = "<group>"; };
 		DD6268FE282D44A300781CEF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		DD626901282E814200781CEF /* PassarosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassarosService.swift; sourceTree = "<group>"; };
+		DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGrandeAnimalView.swift; sourceTree = "<group>"; };
 		DDEA7846282C867900F958F0 /* Passaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passaro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +71,7 @@
 		DD6268D9282BE3AB00781CEF /* BirdDex */ = {
 			isa = PBXGroup;
 			children = (
-				DD6268FD282D346900781CEF /* Controller */,
+				DD626900282E811000781CEF /* Service */,
 				DD6268E8282BE3BD00781CEF /* View */,
 				DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */,
 				DD6268DC282BE3AB00781CEF /* ContentView.swift */,
@@ -94,15 +98,17 @@
 				DD6268FE282D44A300781CEF /* SwiftUIView.swift */,
 				DD6268EB282BE3EB00781CEF /* FavoritosView.swift */,
 				DD6268F3282D25A800781CEF /* PerfilPassaroView.swift */,
+				DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		DD6268FD282D346900781CEF /* Controller */ = {
+		DD626900282E811000781CEF /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DD626901282E814200781CEF /* PassarosService.swift */,
 			);
-			path = Controller;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		DDEA7845282C865700F958F0 /* Model */ = {
@@ -185,10 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD626902282E814200781CEF /* PassarosService.swift in Sources */,
 				DD6268DD282BE3AB00781CEF /* ContentView.swift in Sources */,
 				DD6268EA282BE3D400781CEF /* CatalogoView.swift in Sources */,
 				DD6268EC282BE3EB00781CEF /* FavoritosView.swift in Sources */,
 				DD6268F4282D25A800781CEF /* PerfilPassaroView.swift in Sources */,
+				DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */,
 				DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */,
 				DD6268F0282BEA4900781CEF /* CardAnimalView.swift in Sources */,
 				DD6268FA282D318E00781CEF /* Habitat.swift in Sources */,

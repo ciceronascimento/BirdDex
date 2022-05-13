@@ -17,11 +17,11 @@ struct SwiftUIView: View {
             Image("pombo")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 68, height: 68)
-                .padding([.bottom, .trailing], 4)
+                .frame(width: 70, height: 70)
+                .padding([.bottom, .trailing], 0.01)
                 .overlay(
                     Circle()
-                        .scale(1.6, anchor: .leading)
+                        .scale(1.5, anchor: .init(x: 0.2, y: 0.2))
                         .fill(Color.white.opacity(0.25))
                 )
             

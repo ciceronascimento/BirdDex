@@ -8,9 +8,10 @@
 import Foundation
 
 
-enum Caracteristica {
-    case carnivoro
-    case herbivoro
-    case detritivoro
-    case oviparo
-}
+//enum Caracteristica: String {
+//    case carnivoro
+//    case herbivoro
+//    case detritivoro
+//    case oviparo
+//    case onivoro
+//}

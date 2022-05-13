@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct CatalogoView: View {
+    @State var showingSheet: Bool = false
+    
+    var passaros = PassarosService().passaros
     let alignment: VerticalAlignment = .top
     let stackSpacing: CGFloat = 0.1
-    let passaros = ["pombo", "testePassaro1", "pato", "testePassaro1"]
+//    let passaros = ["pombo", "testePassaro1", "pato", "testePassaro1"]
     
     @State private var busca = ""
     
@@ -21,21 +24,81 @@ struct CatalogoView: View {
         
         NavigationView{
             
-            ScrollView(.vertical){
+            VStack(alignment: .leading){
+                Text("Minha região")
+                    .font(.title)
+                    .bold()
+                ScrollView(.horizontal){
 
-                LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
-                    
-                    ForEach(passaros, id: \.self) { passaro in
-                        CardAnimalView(imagemPassaro: passaro)
-                            
+                    HStack{
+                        ForEach(passaros, id: \.self) { passaro in
+                            CardAnimalView(passaro: passaro, showingSheet: $showingSheet)
+                                .fullScreenCover(isPresented: $showingSheet) {
+                                        NavigationView {
+                                            Text("Swipe down to dismiss")
+                                                .toolbar {
+                                                    ToolbarItem(placement: .primaryAction) {
+                                                        Button(action: {
+                                                            self.showingSheet = false
+                                                        }) {
+                                                            Text("Fechar").fontWeight(.semibold)
+                                                        }
+                                                    }
+                                                }
+                                        }
+                                    }
+
+                        }
+    //                        Text(passaro)
                     }
-    
                 }
+                
+                Text("Catálogo")
+                    .font(.title)
+                    .bold()
+                
+                ScrollView(.vertical){
+
+                    HStack(){
+
+    //                    Text("Catálogo")
+    //                        .font(.title)
+    //                        .bold()
+    //
+    //                    Spacer()
+                    }
+
+                        
+                    LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
+                        
+                        ForEach(passaros, id: \.self) { passaro in
+                            CardAnimalView(passaro: passaro, showingSheet: $showingSheet)
+                                .fullScreenCover(isPresented: $showingSheet) {
+                                        NavigationView {
+                                            Text("Swipe down to dismiss")
+                                                .toolbar {
+                                                    ToolbarItem(placement: .primaryAction) {
+                                                        Button(action: {
+                                                            self.showingSheet = false
+                                                        }) {
+                                                            Text("Fechar").fontWeight(.semibold)
+                                                        }
+                                                    }
+                                                }
+                                        }
+                                    }
+
+                        }
+    //                        Text(passaro)
+                    }
+                }
+                .navigationTitle("Descobrir")
+                .navigationBarTitleDisplayMode(.inline)
+                .searchable(text: $busca)
+                
             }
-            .navigationTitle("Descobrir")
-            .navigationBarTitleDisplayMode(.automatic)
-            .searchable(text: $busca)
             
+
         }
     }
 }

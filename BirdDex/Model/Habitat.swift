@@ -23,7 +23,7 @@ enum Habitat: String {
         case .floresta:
             return Color.green
         case .deserto:
-            return Color.yellow
+            return Color.init(red: 255 / 255 , green: 148 / 255 , blue: 0)
         }
     }
 }
