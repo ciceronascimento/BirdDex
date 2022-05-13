@@ -34,7 +34,7 @@ struct CatalogoView: View {
                     HStack{
                         Section{
                             ForEach(passaros, id: \.self) { passaro in
-                                CardAnimalView(passaro: passaro, showingSheet: $showingSheet)
+                                CardGrandeAnimalView(passaro: passaro, showingSheet: $showingSheet)
                                     .fullScreenCover(isPresented: $showingSheet) {
                                             NavigationView {
                                                 Text("Swipe down to dismiss")
