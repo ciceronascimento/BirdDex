@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CatalogoView: View {
     @State var showingSheet: Bool = false
+//    @State var clique = PassarosService().passaros[
     
     var passaros = PassarosService().passaros
     let alignment: VerticalAlignment = .top
@@ -19,6 +20,7 @@ struct CatalogoView: View {
     
     let colunas: Int = 2
     let espacosGrid: CGFloat = 0
+//    var passarosArray: [Passaro]
     
     var body: some View {
         
@@ -26,84 +28,38 @@ struct CatalogoView: View {
             
             
             VStack(alignment: .leading){
-                Text("Minha região")
-                    .font(.title)
-                    .bold()
-                ScrollView(.horizontal){
 
-                    HStack{
-                        Section{
-                            ForEach(passaros, id: \.self) { passaro in
-                                CardGrandeAnimalView(passaro: passaro, showingSheet: $showingSheet)
-                                    .fullScreenCover(isPresented: $showingSheet) {
-                                            NavigationView {
-                                                Text("Swipe down to dismiss")
-                                                    .toolbar {
-                                                        ToolbarItem(placement: .primaryAction) {
-                                                            Button(action: {
-                                                                self.showingSheet = false
-                                                            }) {
-                                                                Text("Fechar").fontWeight(.semibold)
-                                                            }
-                                                        }
-                                                    }
-                                            }
-                                        }
-                                    }
-
-
-                        }
-    //                        Text(passaro)
-                    }
-                }
-                
-                Text("Catálogo")
-                    .font(.title)
-                    .bold()
-                
                 ScrollView(.vertical){
+                    Text("Minha região")
+                        .font(.title)
+                        .bold()
 
-                    HStack(){
+                    ScrollView(.horizontal){
+                        HStack{
+                            Section{
+                                ForEach(passaros, id: \.self) { passaro in
+                                    CardGrandeAnimalView(passaro: passaro)
 
-    //                    Text("Catálogo")
-    //                        .font(.title)
-    //                        .bold()
-    //
-    //                    Spacer()
+                                        }
+                            }
+                        }
                     }
-
-                        
+                    Text("Catálogo")
+                        .font(.title)
+                        .bold()
+                    
                     LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
                         
                         ForEach(passaros, id: \.self) { passaro in
-                            CardAnimalView(passaro: passaro, showingSheet: $showingSheet)
-                                .fullScreenCover(isPresented: $showingSheet) {
-                                        NavigationView {
-                                            Text("Swipe down to dismiss")
-                                                .toolbar {
-                                                    ToolbarItem(placement: .primaryAction) {
-                                                        Button(action: {
-                                                            self.showingSheet = false
-                                                        }) {
-                                                            Text("Fechar").fontWeight(.semibold)
-                                                        }
-                                                    }
-                                                }
-                                        }
-                                    }
-
+//                            passarosArray.append(passaro)
+                            CardAnimalView(passaro: passaro)
                         }
-    //                        Text(passaro)
                     }
                 }
                 .navigationTitle("Descobrir")
                 .navigationBarTitleDisplayMode(.inline)
                 .searchable(text: $busca)
-                
             }
-            
-            
-
         }
     }
 }

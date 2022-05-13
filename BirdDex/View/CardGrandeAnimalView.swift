@@ -20,7 +20,7 @@ struct CardGrandeAnimalView: View {
     //    var habitat:Habitat
         
         @State private var selectedMaterial:Material = .regularMaterial
-        @Binding var showingSheet: Bool
+        @State var showingSheet = false
 
     var body: some View {
         Button {
@@ -30,34 +30,42 @@ struct CardGrandeAnimalView: View {
                 
                 VStack(alignment: .leading){
                     Text(passaro.nome)
-                        .font(.headline)
+                        .font(.title)
+                        .bold()
                         .foregroundColor(.white)
                         .padding(.top)
                         .padding(.leading)
                     
                     HStack(){
-                        Text("122")
-                            .font(.subheadline).bold()
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.white.opacity(0.25))
-                            )
-                            .frame(width: 100, height: 24)
+                        Spacer()
+                            .frame(width: 200, height: 24)
                         Image(passaro.nomeImagem)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 68, height: 68)
-                            .padding([.bottom, .trailing], 4)
+                            .frame(width: 150, height: 150)
+//                            .padding()
                             .overlay(
                                 Circle()
-                                    .scale(1.4, anchor: .center)
+                                    .scale(2.2, anchor: .center)
                                     .fill(Color.white.opacity(0.25))
                             )
                     }
                 }
+                .fullScreenCover(isPresented: $showingSheet) {
+                        NavigationView {
+                            PerfilPassaroView(passaro: passaro)
+                                .toolbar {
+                                    ToolbarItem(placement: .primaryAction) {
+                                        Button(action: {
+                                            self.showingSheet = false
+                                        }) {
+                                            Label("Fechar", systemImage: "x.circle.fill")
+                                                .foregroundColor(.white)
+                                        }
+                                    }
+                                }
+                        }
+                    }
                 
                 
     //            RoundedRectangle(cornerRadius: 24, style: .continuous)
@@ -78,10 +86,11 @@ struct CardGrandeAnimalView: View {
     //            }
             }
             .background(passaro.habitat.color)
+//            .background(Image("testeBackground"))
     //        .background(habitat.color)
             .cornerRadius(12)
-            .shadow(radius: 10)
-        .padding(.bottom)
+//            .shadow(radius: 10)
+            .padding([.bottom, .horizontal], 2.5)
         }
 //        .padding([.top, .horizontal])
 //        Spacer()

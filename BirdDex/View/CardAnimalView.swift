@@ -23,14 +23,23 @@ struct CardAnimalView: View {
 //    var habitat:Habitat
     
     @State private var selectedMaterial:Material = .regularMaterial
-    @Binding var showingSheet: Bool
+    @State var showingSheet = false
+//    @Binding var clique: Passaro
+    
+//    var clique:Passaro
 
     
     var body: some View {
         
         Button {
             self.showingSheet = true
-        } label: {
+//            self.clique = passaro
+//            @Binding var clique = passaro
+        }
+    
+
+    
+        label: {
             ZStack{
                 
                 VStack(alignment: .leading){
@@ -63,24 +72,26 @@ struct CardAnimalView: View {
                             )
                     }
                 }
-                
-                
-    //            RoundedRectangle(cornerRadius: 24, style: .continuous)
-    //                .foregroundColor(.accentColor)
-    //                .aspectRatio(1.618, contentMode: .fit)
-    //                .background(selectedMaterial, in:
-    //                                RoundedRectangle(cornerRadius: 16.0))
-    //            HStack{
-    //                Spacer()
-    //                    .scaledToFit()
-    //
-    //                Spacer()
-    //
-    //                Image(imagemPassaro)
-    //                    .resizable()
-    //                    .scaledToFit()
-    //                Spacer()
-    //            }
+
+            }
+//            .fullScreenCover(isPresented: $showingSheet){
+//                PerfilPassaroView(passaro: passaro)
+            .fullScreenCover(isPresented: $showingSheet) {
+                NavigationView {
+                    PerfilPassaroView(passaro: passaro)
+                        .toolbar {
+                            ToolbarItem(placement: .primaryAction) {
+                                Button(action: {
+                                    self.showingSheet = false
+                                }) {
+                                    Label("Fechar", systemImage: "x.circle.fill")
+                                        .foregroundColor(.white)
+                                }
+                            }
+                        }
+                }
+            
+
             }
             .background(passaro.habitat.color)
     //        .background(habitat.color)
@@ -94,9 +105,44 @@ struct CardAnimalView: View {
 }
 
 
+//        .fullScreenCover(isPresented: $showingSheet) {
+//            NavigationView {
+//                PerfilPassaroView(passaro: passaro)
+//                    .toolbar {
+//                        ToolbarItem(placement: .primaryAction) {
+//                            Button(action: {
+//                                self.showingSheet = false
+//                            }) {
+//                                Label("Fechar", systemImage: "x.circle.fill")
+//                                    .foregroundColor(.white)
+//                            }
+//                        }
+//                    }
+//            }
+//        }
+
+
 //struct CardAnimalView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        CardAnimalView(passaro: Passaro)
 //            .previewLayout(.sizeThatFits)
 //    }
 //}
+
+
+//            RoundedRectangle(cornerRadius: 24, style: .continuous)
+//                .foregroundColor(.accentColor)
+//                .aspectRatio(1.618, contentMode: .fit)
+//                .background(selectedMaterial, in:
+//                                RoundedRectangle(cornerRadius: 16.0))
+//            HStack{
+//                Spacer()
+//                    .scaledToFit()
+//
+//                Spacer()
+//
+//                Image(imagemPassaro)
+//                    .resizable()
+//                    .scaledToFit()
+//                Spacer()
+//            }

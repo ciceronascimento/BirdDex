@@ -12,14 +12,7 @@ struct FavoritosView: View {
         
 //        Text("Favoritos")
         NavigationView{
-            
-            VStack{
-                Button("Teste"){
-                    NavigationLink(destination: PerfilPassaroView()){
-                        Text("oi")
-                    }
-                }
-            }
+            Text("oi")
         }
     }
 }
