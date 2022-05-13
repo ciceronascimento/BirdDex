@@ -24,6 +24,7 @@ struct CatalogoView: View {
         
         NavigationView{
             
+            
             VStack(alignment: .leading){
                 Text("Minha região")
                     .font(.title)
@@ -31,22 +32,25 @@ struct CatalogoView: View {
                 ScrollView(.horizontal){
 
                     HStack{
-                        ForEach(passaros, id: \.self) { passaro in
-                            CardAnimalView(passaro: passaro, showingSheet: $showingSheet)
-                                .fullScreenCover(isPresented: $showingSheet) {
-                                        NavigationView {
-                                            Text("Swipe down to dismiss")
-                                                .toolbar {
-                                                    ToolbarItem(placement: .primaryAction) {
-                                                        Button(action: {
-                                                            self.showingSheet = false
-                                                        }) {
-                                                            Text("Fechar").fontWeight(.semibold)
+                        Section{
+                            ForEach(passaros, id: \.self) { passaro in
+                                CardAnimalView(passaro: passaro, showingSheet: $showingSheet)
+                                    .fullScreenCover(isPresented: $showingSheet) {
+                                            NavigationView {
+                                                Text("Swipe down to dismiss")
+                                                    .toolbar {
+                                                        ToolbarItem(placement: .primaryAction) {
+                                                            Button(action: {
+                                                                self.showingSheet = false
+                                                            }) {
+                                                                Text("Fechar").fontWeight(.semibold)
+                                                            }
                                                         }
                                                     }
-                                                }
+                                            }
                                         }
                                     }
+
 
                         }
     //                        Text(passaro)
@@ -97,6 +101,7 @@ struct CatalogoView: View {
                 .searchable(text: $busca)
                 
             }
+            
             
 
         }

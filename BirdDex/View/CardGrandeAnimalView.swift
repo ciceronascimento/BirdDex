@@ -36,7 +36,7 @@ struct CardGrandeAnimalView: View {
                         .padding(.leading)
                     
                     HStack(){
-                        Text("Tipo")
+                        Text("122")
                             .font(.subheadline).bold()
                             .foregroundColor(.white)
                             .padding(.horizontal, 16)
