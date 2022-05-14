@@ -122,12 +122,14 @@ struct CardAnimalView: View {
 //        }
 
 
-//struct CardAnimalView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardAnimalView(passaro: Passaro)
-//            .previewLayout(.sizeThatFits)
-//    }
-//}
+struct CardAnimalView_Previews: PreviewProvider {
+    static var previews: some View {
+        let testService = PassarosService().passaros[1]
+        CardAnimalView(passaro: testService)
+            .previewLayout(.sizeThatFits)
+    }
+}
+
 
 
 //            RoundedRectangle(cornerRadius: 24, style: .continuous)

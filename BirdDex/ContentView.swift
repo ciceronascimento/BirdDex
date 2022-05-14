@@ -15,10 +15,11 @@ struct ContentView: View {
                     Image(systemName: "binoculars")
                     Text("Descobrir")
                 }
-            Text("Que passaro é esse")
+            LocalizacaoView()
                 .tabItem {
-                    Image(systemName: "questionmark.circle")
-                    Text("Que animal é esse?")
+                    Image(systemName: "map")
+//                    Image(systemName: "questionmark.circle")
+                    Text("Localização")
                 }
             FavoritosView()
                 .tabItem {

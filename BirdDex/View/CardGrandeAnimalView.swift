@@ -97,10 +97,10 @@ struct CardGrandeAnimalView: View {
     }
 }
 
-//struct CardGrandeAnimalView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        var passaro:PassarosService
-//        var showwingSheet = false
-//        CardGrandeAnimalView(passaro: passaro.passaros[1], ShowingSheet: showwingSheet)
-//    }
-//}
+struct CardGrandeAnimalView_Previews: PreviewProvider {
+    static var previews: some View {
+        let testService = PassarosService().passaros[1]
+        CardGrandeAnimalView(passaro: testService)
+            .previewLayout(.sizeThatFits)
+    }
+}

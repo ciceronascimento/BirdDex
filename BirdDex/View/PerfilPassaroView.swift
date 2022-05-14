@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct PerfilPassaroView: View {
     
     var passaro:Passaro
@@ -57,7 +58,7 @@ struct PerfilPassaroView: View {
                                 .padding(.vertical, 8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .fill(Color.cyan.opacity(0.25))
+                                        .fill(passaro.habitat.color.opacity(0.25))
                                 )
                                 .frame(width: 100, height: 24)
                             
@@ -92,7 +93,7 @@ struct PerfilPassaroView: View {
             }
             VStack{
                 Button(action: {
-                    // Code
+                    
                 }) {
                     Text("Localizar")
                         .foregroundColor(.white)
@@ -109,12 +110,14 @@ struct PerfilPassaroView: View {
     }
 }
 
-//struct PerfilPassaroView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            PerfilPassaroView()
-//                .previewDevice("iPhone 8")
-//            PerfilPassaroView()
-//        }
-//    }
-//}
+struct PerfilPassaroView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        let testService = PassarosService().passaros[1]
+        
+        Group {
+            PerfilPassaroView(passaro: testService)
+                .previewLayout(.fixed(width: 430, height: 730))
+        }
+    }
+}
