@@ -29,13 +29,11 @@ struct PerfilPassaroView: View {
         .background(passaro.habitat.color)
         .overlay{
             VStack{
-//                Spacer()
                 Image(passaro.nomeImagem)
                     .resizable()
                     .scaledToFit()
                     .frame(alignment: .center)
                     .padding(.bottom, 427)
-//                Spacer()
             }
             
             VStack(alignment: .center){

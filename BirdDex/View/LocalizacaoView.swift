@@ -41,8 +41,8 @@ struct LocalizacaoView: View {
     }
 }
 
-struct LocalizacaoView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocalizacaoView()
-    }
-}
+//struct LocalizacaoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocalizacaoView()
+//    }
+//}

@@ -50,16 +50,19 @@ struct CardAnimalView: View {
                         .padding(.leading)
                     
                     HStack(){
-                        Text("Tipo")
+                        Text("Condor")
                             .font(.subheadline).bold()
                             .foregroundColor(.white)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 8)
+                            .lineLimit(nil)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .fill(Color.white.opacity(0.25))
                             )
+                            .fixedSize(horizontal: false, vertical: true)
                             .frame(width: 100, height: 24)
+                        
                         Image(passaro.nomeImagem)
                             .resizable()
                             .scaledToFit()

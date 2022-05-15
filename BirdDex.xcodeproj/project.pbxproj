@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3E266128313858006DDC72 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E266028313858006DDC72 /* InfoView.swift */; };
 		DD4182EB282F13800079B592 /* LocalizacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4182EA282F137F0079B592 /* LocalizacaoView.swift */; };
 		DD6268DB282BE3AB00781CEF /* BirdDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */; };
 		DD6268DD282BE3AB00781CEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268DC282BE3AB00781CEF /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD3E266028313858006DDC72 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		DD4182EA282F137F0079B592 /* LocalizacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoView.swift; sourceTree = "<group>"; };
 		DD6268D7282BE3AB00781CEF /* BirdDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDexApp.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				DD6268F3282D25A800781CEF /* PerfilPassaroView.swift */,
 				DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */,
 				DD4182EA282F137F0079B592 /* LocalizacaoView.swift */,
+				DD3E266028313858006DDC72 /* InfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				DD6268EC282BE3EB00781CEF /* FavoritosView.swift in Sources */,
 				DD6268F4282D25A800781CEF /* PerfilPassaroView.swift in Sources */,
 				DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */,
+				DD3E266128313858006DDC72 /* InfoView.swift in Sources */,
 				DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */,
 				DD6268F0282BEA4900781CEF /* CardAnimalView.swift in Sources */,
 				DD6268FA282D318E00781CEF /* Habitat.swift in Sources */,

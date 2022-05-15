@@ -21,10 +21,10 @@ struct ContentView: View {
 //                    Image(systemName: "questionmark.circle")
                     Text("Localização")
                 }
-            FavoritosView()
+            InfoView()
                 .tabItem {
-                    Image(systemName: "star")
-                    Text("Favoritos")
+                    Image(systemName: "info.circle")
+                    Text("info")
                 }
         }
         .font(.headline)

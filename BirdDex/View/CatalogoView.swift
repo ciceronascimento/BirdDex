@@ -13,7 +13,7 @@ struct CatalogoView: View {
     
     var passaros = PassarosService().passaros
     let alignment: VerticalAlignment = .top
-    let stackSpacing: CGFloat = 0.1
+//    let stackSpacing: CGFloat = 0.1
 //    let passaros = ["pombo", "testePassaro1", "pato", "testePassaro1"]
     
     @State private var busca = ""
