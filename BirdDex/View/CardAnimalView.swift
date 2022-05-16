@@ -44,13 +44,15 @@ struct CardAnimalView: View {
                 
                 VStack(alignment: .leading){
                     Text(passaro.nome)
+                        .lineLimit(1)
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding(.top)
                         .padding(.leading)
+                        
                     
                     HStack(){
-                        Text("Condor")
+                        Text(passaro.tipo)
                             .font(.subheadline).bold()
                             .foregroundColor(.white)
                             .padding(.horizontal, 16)
@@ -82,6 +84,8 @@ struct CardAnimalView: View {
             .fullScreenCover(isPresented: $showingSheet) {
                 NavigationView {
                     PerfilPassaroView(passaro: passaro)
+//                        .edgesIgnoringSafeArea(.all)
+//                        .transition(.move(edge: .bottom))
                         .toolbar {
                             ToolbarItem(placement: .primaryAction) {
                                 Button(action: {
@@ -90,12 +94,16 @@ struct CardAnimalView: View {
                                     Label("Fechar", systemImage: "x.circle.fill")
                                         .foregroundColor(.white)
                                 }
+                                
                             }
+
                         }
                 }
-            
+
+                
 
             }
+//            .transition(.scale)
             .background(passaro.habitat.color)
     //        .background(habitat.color)
             .cornerRadius(12)

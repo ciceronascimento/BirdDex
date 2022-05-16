@@ -13,6 +13,7 @@ enum Habitat: String {
     case oceano
     case floresta
     case deserto
+    case extinto
     
     var color: Color {
         switch self {
@@ -24,6 +25,9 @@ enum Habitat: String {
             return Color.green
         case .deserto:
             return Color.init(red: 255 / 255 , green: 148 / 255 , blue: 0)
+        case .extinto:
+            return Color.indigo
         }
+        
     }
 }

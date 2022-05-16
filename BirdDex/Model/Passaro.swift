@@ -12,6 +12,7 @@ struct Passaro: Hashable {
     let id: Int
     let nome: String
     let nomeImagem: String
+    let tipo:String
 //    let caracteristica: Caracteristica
     let habitat: Habitat
 }
