@@ -35,7 +35,8 @@ struct CardGrandeAnimalView: View {
                         .foregroundColor(.white)
                         .padding(.top)
                         .padding(.leading)
-                    
+                        .padding(.bottom, -8)
+
                     HStack(){
                         Spacer()
                             .frame(width: 200, height: 24)
@@ -44,13 +45,25 @@ struct CardGrandeAnimalView: View {
                             .scaledToFit()
                             .frame(width: 150, height: 150)
 //                            .padding()
-                            .overlay(
-                                Circle()
-                                    .scale(2.2, anchor: .center)
-                                    .fill(Color.white.opacity(0.25))
-                            )
+//                            .background(
+//                                Circle()
+//                                    .scale(2.0, anchor: .center)
+//                                    .fill(Color.white.opacity(0.15))
+//                            )
+                        
+                        Spacer()
+                            .frame(width: 30, height: 24)
+                        
                     }
+                    .background(
+                        .thinMaterial, in: RoundedRectangle(cornerRadius: 10)
+                        
+                        .scale(0.95, anchor: .center)
+                    )
+                    .padding(.bottom, 6)
                 }
+
+                
                 .fullScreenCover(isPresented: $showingSheet) {
                         NavigationView {
                             PerfilPassaroView(passaro: passaro)
@@ -85,8 +98,12 @@ struct CardGrandeAnimalView: View {
     //                Spacer()
     //            }
             }
-            .background(passaro.habitat.color)
-//            .background(Image("testeBackground"))
+//            .background(passaro.habitat.color)
+            .background(
+                Image(passaro.background.rawValue)
+                .resizable()
+//                .scaledToFit()
+            )
     //        .background(habitat.color)
             .cornerRadius(12)
 //            .shadow(radius: 10)

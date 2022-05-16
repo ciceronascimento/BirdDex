@@ -66,6 +66,7 @@ struct CatalogoView: View {
 struct CatalogoView_Previews: PreviewProvider {
     static var previews: some View {
         CatalogoView()
+            .preferredColorScheme(.dark)
     }
 }
 

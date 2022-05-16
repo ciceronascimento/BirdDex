@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD3E266128313858006DDC72 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E266028313858006DDC72 /* InfoView.swift */; };
+		DD3E26632832DE03006DDC72 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E26622832DE03006DDC72 /* Background.swift */; };
 		DD4182EB282F13800079B592 /* LocalizacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4182EA282F137F0079B592 /* LocalizacaoView.swift */; };
 		DD6268DB282BE3AB00781CEF /* BirdDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */; };
 		DD6268DD282BE3AB00781CEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268DC282BE3AB00781CEF /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		DD3E266028313858006DDC72 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		DD3E26622832DE03006DDC72 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		DD4182EA282F137F0079B592 /* LocalizacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoView.swift; sourceTree = "<group>"; };
 		DD6268D7282BE3AB00781CEF /* BirdDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDexApp.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				DDEA7846282C867900F958F0 /* Passaro.swift */,
 				DD6268F9282D318E00781CEF /* Habitat.swift */,
 				DD6268FB282D33F700781CEF /* Caracteristica.swift */,
+				DD3E26622832DE03006DDC72 /* Background.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				DD6268DB282BE3AB00781CEF /* BirdDexApp.swift in Sources */,
 				DD6268FC282D33F700781CEF /* Caracteristica.swift in Sources */,
 				DDEA7847282C867900F958F0 /* Passaro.swift in Sources */,
+				DD3E26632832DE03006DDC72 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
