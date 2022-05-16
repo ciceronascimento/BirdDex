@@ -12,7 +12,7 @@ import CoreLocation
 struct LocalizacaoView: View {
     
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384), span: MKCoordinateSpan(latitudeDelta: 150, longitudeDelta: 150))
     
     var body: some View {
         NavigationView{
@@ -41,8 +41,8 @@ struct LocalizacaoView: View {
     }
 }
 
-//struct LocalizacaoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocalizacaoView()
-//    }
-//}
+struct LocalizacaoView_Previews: PreviewProvider {
+    static var previews: some View {
+        LocalizacaoView()
+    }
+}

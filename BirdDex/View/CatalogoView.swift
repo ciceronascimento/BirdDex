@@ -30,14 +30,14 @@ struct CatalogoView: View {
             VStack(alignment: .leading){
 
                 ScrollView(.vertical){
-                    Text("Minha região")
+                    Text("Destaques")
                         .font(.title)
                         .bold()
 
                     ScrollView(.horizontal){
                         HStack{
                             Section{
-                                ForEach(passaros, id: \.self) { passaro in
+                                ForEach(passaros.shuffled(), id: \.self) { passaro in
                                     CardGrandeAnimalView(passaro: passaro)
 
                                         }
@@ -47,7 +47,6 @@ struct CatalogoView: View {
                     Text("Catálogo")
                         .font(.title)
                         .bold()
-                    
                     LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
                         
                         ForEach(passaros, id: \.self) { passaro in

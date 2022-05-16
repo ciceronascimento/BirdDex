@@ -41,7 +41,6 @@ struct CardAnimalView: View {
     
         label: {
             ZStack{
-                
                 VStack(alignment: .leading){
                     Text(passaro.nome)
                         .lineLimit(1)
@@ -72,10 +71,11 @@ struct CardAnimalView: View {
                             .padding([.bottom, .trailing], 4)
                             .overlay(
                                 Circle()
-                                    .scale(1.4, anchor: .center)
+                                    .scale(1.3, anchor: .center)
                                     .fill(Color.white.opacity(0.25))
                             )
                     }
+                    .padding(.top)
                 }
 
             }

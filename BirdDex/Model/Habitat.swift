@@ -9,24 +9,27 @@ import Foundation
 import SwiftUI
 
 enum Habitat: String {
-    case montanha
-    case oceano
-    case floresta
-    case deserto
-    case extinto
+    case Montanha
+    case Oceano
+    case Floresta
+    case Deserto
+    case Extinto
+    case Neve
     
     var color: Color {
         switch self {
-        case .montanha:
+        case .Montanha:
             return Color.brown
-        case .oceano:
+        case .Oceano:
             return Color.cyan
-        case .floresta:
+        case .Floresta:
             return Color.green
-        case .deserto:
+        case .Deserto:
             return Color.init(red: 255 / 255 , green: 148 / 255 , blue: 0)
-        case .extinto:
+        case .Extinto:
             return Color.indigo
+        case .Neve:
+            return Color.gray
         }
         
     }
