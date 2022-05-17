@@ -27,7 +27,7 @@ enum Habitat: String {
         case .Deserto:
             return Color.init(red: 255 / 255 , green: 148 / 255 , blue: 0)
         case .Extinto:
-            return Color.indigo
+            return Color.init(red: 28 / 255 , green: 49 / 255 , blue: 58 / 255)
         case .Neve:
             return Color.gray
         }

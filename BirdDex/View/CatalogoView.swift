@@ -30,9 +30,14 @@ struct CatalogoView: View {
             VStack(alignment: .leading){
 
                 ScrollView(.vertical){
-                    Text("Destaques")
-                        .font(.title)
-                        .bold()
+                    
+                    HStack{
+                        Text("Destaques")
+                            .font(.title)
+                            .bold()
+                            .padding(.horizontal, 15)
+                        Spacer()
+                    }
 
                     ScrollView(.horizontal){
                         HStack{
@@ -44,9 +49,21 @@ struct CatalogoView: View {
                             }
                         }
                     }
-                    Text("Catálogo")
-                        .font(.title)
-                        .bold()
+                    HStack{
+                        
+                        Text("Catálogo")
+                            .font(.title)
+                            .bold()
+                            .padding(.horizontal, 15)
+                        Spacer()
+                        Button{
+                            
+                        } label: {
+                            Image(systemName: "slider.horizontal.3")
+                        }.padding(.horizontal, 15)
+                        
+                    }
+
                     LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
                         
                         ForEach(passaros, id: \.self) { passaro in

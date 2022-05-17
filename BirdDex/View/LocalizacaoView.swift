@@ -10,7 +10,12 @@ import MapKit
 import CoreLocation
 
 struct LocalizacaoView: View {
-    
+//
+//    @State var latitudePadrao = -3.7627579
+//    @State var longeitudePadrao = -38.5692384
+//    @State var latitudeDeltaPadrao = 150
+//    @State var longitudeDeltaPadrao = 150
+//
     
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384), span: MKCoordinateSpan(latitudeDelta: 150, longitudeDelta: 150))
     

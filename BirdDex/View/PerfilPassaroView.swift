@@ -30,6 +30,12 @@ struct PerfilPassaroView: View {
                 }
             }
             .background(passaro.habitat.color)
+            
+//            .background(
+//                Image(passaro.background.rawValue)
+//                .resizable()
+////                .scaledToFit()
+//            )
             .overlay{
                 VStack{
                     Image(passaro.nomeImagem)
