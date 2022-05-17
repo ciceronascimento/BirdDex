@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import MapKit
 
 struct Passaro: Hashable {
     let id: Int
@@ -16,4 +16,6 @@ struct Passaro: Hashable {
 //    let caracteristica: Caracteristica
     let habitat: Habitat
     let background: Background
+    let latitudePassaro: CLLocationDegrees
+    let longigudePassaro: CLLocationDegrees
 }

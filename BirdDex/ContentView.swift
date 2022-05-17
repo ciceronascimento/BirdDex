@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     var body: some View {
@@ -15,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "binoculars")
                     Text("Descobrir")
                 }
-            LocalizacaoView()
+            LocalizacaoView(coordinate: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384))
                 .tabItem {
                     Image(systemName: "map")
 //                    Image(systemName: "questionmark.circle")

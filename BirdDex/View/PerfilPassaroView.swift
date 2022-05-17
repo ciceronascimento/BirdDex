@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
-
+import MapKit
 
 struct PerfilPassaroView: View {
+    
+//    @State var latitudePassaro = 35.652832
+//    @State var longitudePassaro = 139.839478
     
     var passaro:Passaro
     
@@ -101,7 +104,7 @@ struct PerfilPassaroView: View {
                 
                 VStack{
                     NavigationLink(destination:{
-                        LocalizacaoView()
+                        LocalizacaoView(coordinate: CLLocationCoordinate2D(latitude: passaro.latitudePassaro, longitude: passaro.longigudePassaro))
                     }) {
                         Text("Localizar")
                             .foregroundColor(.white)
@@ -129,6 +132,7 @@ struct PerfilPassaroView_Previews: PreviewProvider {
         
         let testService = PassarosService().passaros[1]
         PerfilPassaroView(passaro: testService)
+            .previewInterfaceOrientation(.portrait)
         
 //        Group {
 //

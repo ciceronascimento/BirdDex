@@ -33,11 +33,20 @@ struct CardGrandeAnimalView: View {
                         .font(.title)
                         .bold()
                         .foregroundColor(.white)
+//                        .shadow(radius: 5)
+                        .shadow(color: .black, radius: 2, x: 1, y: 1)
                         .padding(.top)
                         .padding(.leading)
                         .padding(.bottom, -8)
+                        
 
                     HStack(){
+                        
+//                        Text("Esse pássaro é muito legal e\n essa descrição é muito aleatoria")
+//                            .padding(.horizontal)
+//                            .foregroundColor(.black)
+//                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+//                            .lineSpacing(<#T##lineSpacing: CGFloat##CGFloat#>)
                         Spacer()
                             .frame(width: 200, height: 24)
                         Image(passaro.nomeImagem)

@@ -11,33 +11,17 @@ import SwiftUI
 
 struct CardAnimalView: View {
     
-    
-//    var imagemFundo:String
     var passaro: Passaro
-    
-//    var id:Int
-//    var nome:String
-//    var nomeImagem:String
-//    var caracteristica:String
-////    var caracteristica:Caracteristica
-//    var habitat:Habitat
     
     @State private var selectedMaterial:Material = .regularMaterial
     @State var showingSheet = false
-//    @Binding var clique: Passaro
-    
-//    var clique:Passaro
 
     
     var body: some View {
         
         Button {
             self.showingSheet = true
-//            self.clique = passaro
-//            @Binding var clique = passaro
         }
-    
-
     
         label: {
             ZStack{
@@ -48,7 +32,6 @@ struct CardAnimalView: View {
                         .foregroundColor(.white)
                         .padding(.top)
                         .padding(.leading)
-                        
                     
                     HStack(){
                         Text(passaro.tipo)
@@ -79,13 +62,9 @@ struct CardAnimalView: View {
                 }
 
             }
-//            .fullScreenCover(isPresented: $showingSheet){
-//                PerfilPassaroView(passaro: passaro)
             .fullScreenCover(isPresented: $showingSheet) {
                 NavigationView {
                     PerfilPassaroView(passaro: passaro)
-//                        .edgesIgnoringSafeArea(.all)
-//                        .transition(.move(edge: .bottom))
                         .toolbar {
                             ToolbarItem(placement: .primaryAction) {
                                 Button(action: {
@@ -100,38 +79,15 @@ struct CardAnimalView: View {
                         }
                 }
 
-                
-
             }
-//            .transition(.scale)
             .background(passaro.habitat.color)
-    //        .background(habitat.color)
             .cornerRadius(12)
             .shadow(radius: 10)
-        .padding(.bottom)
+            .padding(.bottom)
         }
-//        .padding([.top, .horizontal])
-//        Spacer()
+
     }
 }
-
-
-//        .fullScreenCover(isPresented: $showingSheet) {
-//            NavigationView {
-//                PerfilPassaroView(passaro: passaro)
-//                    .toolbar {
-//                        ToolbarItem(placement: .primaryAction) {
-//                            Button(action: {
-//                                self.showingSheet = false
-//                            }) {
-//                                Label("Fechar", systemImage: "x.circle.fill")
-//                                    .foregroundColor(.white)
-//                            }
-//                        }
-//                    }
-//            }
-//        }
-
 
 struct CardAnimalView_Previews: PreviewProvider {
     static var previews: some View {
@@ -140,22 +96,3 @@ struct CardAnimalView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
-
-
-
-//            RoundedRectangle(cornerRadius: 24, style: .continuous)
-//                .foregroundColor(.accentColor)
-//                .aspectRatio(1.618, contentMode: .fit)
-//                .background(selectedMaterial, in:
-//                                RoundedRectangle(cornerRadius: 16.0))
-//            HStack{
-//                Spacer()
-//                    .scaledToFit()
-//
-//                Spacer()
-//
-//                Image(imagemPassaro)
-//                    .resizable()
-//                    .scaledToFit()
-//                Spacer()
-//            }
