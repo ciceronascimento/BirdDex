@@ -78,6 +78,7 @@ struct CatalogoView: View {
                             CardAnimalView(passaro: passaro)
                         }
                     }
+
                 }
             }
         }

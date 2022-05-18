@@ -45,30 +45,23 @@ struct LocalizacaoView: View {
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width: 80, height: 80, alignment: .center)
-
                                     }
                                 }
-
                             }
                         )
                 }
                 .cornerRadius(20)
                 .headerProminence(.increased)
             }
-//            .accentColor(.green)
             .navigationTitle("Localização")
             .navigationBarTitleDisplayMode(.automatic)
-         
         }
-//        .accentColor(passaro.habitat.color)
-        
     }
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
         region = MKCoordinateRegion(
             center: coordinate, span: MKCoordinateSpan(latitudeDelta: 10.8, longitudeDelta: 10.8))
     }
 }
-
 struct LocalizacaoView_Previews: PreviewProvider {
     static var previews: some View {
         let testService = PassarosService().passaros[1]
