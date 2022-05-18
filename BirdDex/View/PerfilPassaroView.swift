@@ -97,20 +97,19 @@ struct PerfilPassaroView: View {
                             }
                         }
                         .padding(.horizontal, -50)
-                        
                     }
-                    
+
                 }
-                
                 VStack{
                     NavigationLink(destination:{
-                        LocalizacaoView(coordinate: CLLocationCoordinate2D(latitude: passaro.latitudePassaro, longitude: passaro.longigudePassaro))
+                        LocalizacaoView(passaro: passaro, coordinate: CLLocationCoordinate2D(latitude: passaro.latitudePassaro, longitude: passaro.longigudePassaro))
                     }) {
                         Text("Localizar")
                             .foregroundColor(.white)
                             .buttonStyle(.borderedProminent)
                             .controlSize(.regular)
                     }
+                    
                     .padding()
                     .background(passaro.habitat.color)
                     .clipShape(Capsule())
@@ -121,9 +120,6 @@ struct PerfilPassaroView: View {
             
         }
         .navigationBarTitle("", displayMode: .inline)
-//        .navigationBarTitle("oi")
-//        .navigationBarHidden(true)
-        
     }
 }
 
@@ -133,10 +129,5 @@ struct PerfilPassaroView_Previews: PreviewProvider {
         let testService = PassarosService().passaros[1]
         PerfilPassaroView(passaro: testService)
             .previewInterfaceOrientation(.portrait)
-        
-//        Group {
-//
-//                .previewLayout(.fixed(width: 430, height: 730))
-//        }
     }
 }

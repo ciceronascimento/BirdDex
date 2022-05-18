@@ -8,8 +8,10 @@
 import Foundation
 import MapKit
 
+
+
 struct Passaro: Hashable {
-    let id: Int
+    let id: UUID
     let nome: String
     let nomeImagem: String
     let tipo:String

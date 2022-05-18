@@ -20,6 +20,7 @@ struct CatalogoView: View {
     
     let colunas: Int = 2
     let espacosGrid: CGFloat = 0
+
 //    var passarosArray: [Passaro]
     
     var body: some View {

@@ -62,7 +62,7 @@ struct CardAnimalView: View {
                 }
 
             }
-            .fullScreenCover(isPresented: $showingSheet) {
+            .sheet(isPresented: $showingSheet) {
                 NavigationView {
                     PerfilPassaroView(passaro: passaro)
                         .toolbar {

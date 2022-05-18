@@ -32,7 +32,7 @@ struct CardGrandeAnimalView: View {
                     Text(passaro.nome)
                         .font(.title)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.white)    
 //                        .shadow(radius: 5)
                         .shadow(color: .black, radius: 2, x: 1, y: 1)
                         .padding(.top)
