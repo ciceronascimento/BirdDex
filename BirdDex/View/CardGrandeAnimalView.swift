@@ -73,7 +73,7 @@ struct CardGrandeAnimalView: View {
                 }
 
                 
-                .fullScreenCover(isPresented: $showingSheet) {
+                .sheet(isPresented: $showingSheet) {
                         NavigationView {
                             PerfilPassaroView(passaro: passaro)
                                 .toolbar {
@@ -81,31 +81,15 @@ struct CardGrandeAnimalView: View {
                                         Button(action: {
                                             self.showingSheet = false
                                         }) {
-                                            Label("Fechar", systemImage: "x.circle.fill")
+                                            Text("Fechar")
+                                                .fontWeight(.semibold)
                                                 .foregroundColor(.white)
                                         }
                                     }
                                 }
                         }
                     }
-                
-                
-    //            RoundedRectangle(cornerRadius: 24, style: .continuous)
-    //                .foregroundColor(.accentColor)
-    //                .aspectRatio(1.618, contentMode: .fit)
-    //                .background(selectedMaterial, in:
-    //                                RoundedRectangle(cornerRadius: 16.0))
-    //            HStack{
-    //                Spacer()
-    //                    .scaledToFit()
-    //
-    //                Spacer()
-    //
-    //                Image(imagemPassaro)
-    //                    .resizable()
-    //                    .scaledToFit()
-    //                Spacer()
-    //            }
+
             }
 //            .background(passaro.habitat.color)
             .background(

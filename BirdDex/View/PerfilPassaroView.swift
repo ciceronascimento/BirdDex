@@ -36,7 +36,7 @@ struct PerfilPassaroView: View {
             
 //            .background(
 //                Image(passaro.background.rawValue)
-//                .resizable()
+////                .resizable()
 ////                .scaledToFit()
 //            )
             .overlay{
@@ -109,17 +109,17 @@ struct PerfilPassaroView: View {
                             .buttonStyle(.borderedProminent)
                             .controlSize(.regular)
                     }
-                    
                     .padding()
+                    
                     .background(passaro.habitat.color)
                     .clipShape(Capsule())
-                    
                 }
                 .padding(.top, 300)
             }
-            
         }
         .navigationBarTitle("", displayMode: .inline)
+        
+//        .navigationBarHidden(true)
     }
 }
 

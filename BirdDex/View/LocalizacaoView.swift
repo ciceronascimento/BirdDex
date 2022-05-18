@@ -33,6 +33,8 @@ struct LocalizacaoView: View {
                         }
                         .overlay(
                             ZStack(alignment: .center){
+                                Rectangle()
+                                    .foregroundColor(.white.opacity(0.01))
                                 Circle()
                                     .scale(0.7, anchor: .center)
                                     .foregroundColor(passaro.habitat.color)
@@ -52,11 +54,14 @@ struct LocalizacaoView: View {
                 }
                 .cornerRadius(20)
                 .headerProminence(.increased)
-
             }
+//            .accentColor(.green)
             .navigationTitle("Localização")
             .navigationBarTitleDisplayMode(.automatic)
+         
         }
+//        .accentColor(passaro.habitat.color)
+        
     }
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
         region = MKCoordinateRegion(

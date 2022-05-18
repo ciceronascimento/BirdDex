@@ -70,8 +70,10 @@ struct CardAnimalView: View {
                                 Button(action: {
                                     self.showingSheet = false
                                 }) {
-                                    Label("Fechar", systemImage: "x.circle.fill")
+                                    Text("Fechar")
+                                        .fontWeight(.semibold)
                                         .foregroundColor(.white)
+                                    
                                 }
                                 
                             }

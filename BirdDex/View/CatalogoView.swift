@@ -12,6 +12,7 @@ struct CatalogoView: View {
 //    @State var clique = PassarosService().passaros[
     
     var passaros = PassarosService().passaros
+//    let passarosDestaque = PassarosService().passaros
     let alignment: VerticalAlignment = .top
 //    let stackSpacing: CGFloat = 0.1
 //    let passaros = ["pombo", "testePassaro1", "pato", "testePassaro1"]
@@ -24,10 +25,7 @@ struct CatalogoView: View {
 //    var passarosArray: [Passaro]
     
     var body: some View {
-        
         NavigationView{
-            
-            
             VStack(alignment: .leading){
 
                 ScrollView(.vertical){
@@ -43,8 +41,8 @@ struct CatalogoView: View {
                     ScrollView(.horizontal){
                         HStack{
                             Section{
-                                ForEach(passaros.shuffled(), id: \.self) { passaro in
-                                    CardGrandeAnimalView(passaro: passaro)
+                                ForEach(nomesFiltrados.shuffled(), id: \.self) { passaro2 in
+                                    CardGrandeAnimalView(passaro: passaro2)
 
                                         }
                             }
@@ -58,16 +56,13 @@ struct CatalogoView: View {
                             .padding(.horizontal, 15)
                         Spacer()
                         Button{
-                            
                         } label: {
                             Image(systemName: "slider.horizontal.3")
                         }.padding(.horizontal, 15)
-                        
                     }
-
                     LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
                         
-                        ForEach(passaros, id: \.self) { passaro in
+                        ForEach(nomesFiltrados, id: \.self) { passaro in
 //                            passarosArray.append(passaro)
                             CardAnimalView(passaro: passaro)
                         }
@@ -75,12 +70,26 @@ struct CatalogoView: View {
                 }
                 .navigationTitle("Descobrir")
                 .navigationBarTitleDisplayMode(.inline)
-                .searchable(text: $busca)
+                .searchable(text: $busca) {
+                    LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: 33), count: colunas), spacing: 1) {
+                        
+                        ForEach(nomesFiltrados, id: \.self) { passaro in
+//                            passarosArray.append(passaro)
+                            CardAnimalView(passaro: passaro)
+                        }
+                    }
+                }
             }
         }
     }
+    var nomesFiltrados: [Passaro] {
+        if busca.isEmpty {
+            return passaros
+        } else {
+            return passaros.filter { $0.nome.contains(busca)  }
+        }
+    }
 }
-
 struct CatalogoView_Previews: PreviewProvider {
     static var previews: some View {
         CatalogoView()
