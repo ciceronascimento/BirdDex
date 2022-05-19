@@ -14,13 +14,19 @@ struct CardAnimalView: View {
     var passaro: Passaro
     
     @State private var selectedMaterial:Material = .regularMaterial
-    @State var showingSheet = false
+    @State var mostrarSheet = false
+    
+    
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismissSearch) private var dismissSearch
 
     
     var body: some View {
         
         Button {
-            self.showingSheet = true
+            self.mostrarSheet = true
+            dismiss()
+            dismissSearch()
         }
     
         label: {
@@ -62,20 +68,18 @@ struct CardAnimalView: View {
                 }
 
             }
-            .sheet(isPresented: $showingSheet) {
+            .sheet(isPresented: $mostrarSheet) {
                 NavigationView {
                     PerfilPassaroView(passaro: passaro)
                         .toolbar {
                             ToolbarItem(placement: .primaryAction) {
                                 Button(action: {
-                                    self.showingSheet = false
+                                    self.mostrarSheet = false
                                 }) {
                                     Text("Fechar")
                                         .fontWeight(.semibold)
-                                        .foregroundColor(.white)
-                                    
+                                        .foregroundColor(.white)   
                                 }
-                                
                             }
 
                         }

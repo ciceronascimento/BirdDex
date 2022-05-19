@@ -17,23 +17,23 @@ struct InfoView: View {
                 List(){
                     
                     Section("O que há de novo"){
-                        Label("Os cards agora abrem!", systemImage: "lanyardcard")
+                        Label("Nova barra de busca!", systemImage: "location.magnifyingglass")
                         
-                        Label("Nova aba de mapa!", systemImage: "map")
+                        Label("Agora é possível localizar o habitat dos pássaros!!", systemImage: "map")
                         Label("Bugs resolvidos!", systemImage: "ladybug")
 //                        Text("Nova aba de mapa")
 //                        Text("bugs resolvidos!")
                     }
                     
                     Section("Novidades a caminho"){
-                        Label("Localização das aves", systemImage: "location.magnifyingglass")
+                        Label("Localização das aves no mapa mundo", systemImage: "map")
                         Label("Lista de favoritos", systemImage: "star")
                         Label("Adicione uma ave que ainda não avistamos!", systemImage: "binoculars")
 //                            .lineSpacing(0.1)
                     }
                     
                     Section("Versão atual:"){
-                        Text("v0.1.1")
+                        Text("v0.5.1")
                     }
                 }
                 .listStyle(.insetGrouped)

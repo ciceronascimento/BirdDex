@@ -23,6 +23,8 @@
 		DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268FE282D44A300781CEF /* SwiftUIView.swift */; };
 		DD626902282E814200781CEF /* PassarosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD626901282E814200781CEF /* PassarosService.swift */; };
 		DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */; };
+		DD626910283660CB00781CEF /* BuscaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62690F283660CB00781CEF /* BuscaView.swift */; };
+		DD62691228367A8100781CEF /* LocalizacaoFDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62691128367A8100781CEF /* LocalizacaoFDView.swift */; };
 		DDEA7847282C867900F958F0 /* Passaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA7846282C867900F958F0 /* Passaro.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		DD6268FE282D44A300781CEF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		DD626901282E814200781CEF /* PassarosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassarosService.swift; sourceTree = "<group>"; };
 		DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGrandeAnimalView.swift; sourceTree = "<group>"; };
+		DD62690F283660CB00781CEF /* BuscaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaView.swift; sourceTree = "<group>"; };
+		DD62691128367A8100781CEF /* LocalizacaoFDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoFDView.swift; sourceTree = "<group>"; };
 		DDEA7846282C867900F958F0 /* Passaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passaro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,9 +108,11 @@
 				DD6268FE282D44A300781CEF /* SwiftUIView.swift */,
 				DD6268EB282BE3EB00781CEF /* FavoritosView.swift */,
 				DD6268F3282D25A800781CEF /* PerfilPassaroView.swift */,
+				DD62690F283660CB00781CEF /* BuscaView.swift */,
 				DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */,
 				DD4182EA282F137F0079B592 /* LocalizacaoView.swift */,
 				DD3E266028313858006DDC72 /* InfoView.swift */,
+				DD62691128367A8100781CEF /* LocalizacaoFDView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,10 +209,12 @@
 				DD626902282E814200781CEF /* PassarosService.swift in Sources */,
 				DD6268DD282BE3AB00781CEF /* ContentView.swift in Sources */,
 				DD6268EA282BE3D400781CEF /* CatalogoView.swift in Sources */,
+				DD626910283660CB00781CEF /* BuscaView.swift in Sources */,
 				DD6268EC282BE3EB00781CEF /* FavoritosView.swift in Sources */,
 				DD6268F4282D25A800781CEF /* PerfilPassaroView.swift in Sources */,
 				DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */,
 				DD3E266128313858006DDC72 /* InfoView.swift in Sources */,
+				DD62691228367A8100781CEF /* LocalizacaoFDView.swift in Sources */,
 				DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */,
 				DD6268F0282BEA4900781CEF /* CardAnimalView.swift in Sources */,
 				DD6268FA282D318E00781CEF /* Habitat.swift in Sources */,

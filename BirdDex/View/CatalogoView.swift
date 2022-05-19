@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CatalogoView: View {
-    @State var showingSheet: Bool = false
+//    @State var showingSheet: Bool = false
 //    @State var clique = PassarosService().passaros[
     
     var passaros = PassarosService().passaros
-//    let passarosDestaque = PassarosService().passaros
+    let passarosDestaque = PassarosService().passaros
     let alignment: VerticalAlignment = .top
 //    let stackSpacing: CGFloat = 0.1
 //    let passaros = ["pombo", "testePassaro1", "pato", "testePassaro1"]
@@ -35,13 +35,12 @@ struct CatalogoView: View {
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 15)
-                        Spacer()
+//                        Spacer()
                     }
-
                     ScrollView(.horizontal){
                         HStack{
                             Section{
-                                ForEach(nomesFiltrados.shuffled(), id: \.self) { passaro2 in
+                                ForEach(passarosDestaque.shuffled(), id: \.self) { passaro2 in
                                     CardGrandeAnimalView(passaro: passaro2)
 
                                         }
@@ -54,11 +53,11 @@ struct CatalogoView: View {
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 15)
-                        Spacer()
-                        Button{
-                        } label: {
-                            Image(systemName: "slider.horizontal.3")
-                        }.padding(.horizontal, 15)
+//                        Spacer()
+//                        Button{
+//                        } label: {
+//                            Image(systemName: "slider.horizontal.3")
+//                        }.padding(.horizontal, 15)
                     }
                     LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: espacosGrid), count: colunas), spacing: espacosGrid) {
                         
@@ -71,13 +70,15 @@ struct CatalogoView: View {
                 .navigationTitle("Descobrir")
                 .navigationBarTitleDisplayMode(.inline)
                 .searchable(text: $busca) {
-                    LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: 33), count: colunas), spacing: 1) {
-                        
-                        ForEach(nomesFiltrados, id: \.self) { passaro in
-//                            passarosArray.append(passaro)
-                            CardAnimalView(passaro: passaro)
-                        }
-                    }
+                    
+                    BuscaView(nomesFIltrados: nomesFiltrados)
+//                    LazyVGrid(columns: Array(repeating: .init(.flexible(), spacing: 33), count: colunas), spacing: 1) {
+//                        
+//                        ForEach(nomesFiltrados, id: \.self) { passaro in
+////                            passarosArray.append(passaro)
+//                            CardAnimalView(passaro: passaro)
+//                        }
+//                    }
 
                 }
             }

@@ -18,12 +18,12 @@ struct ContentView: View {
                     Image(systemName: "binoculars")
                     Text("Descobrir")
                 }
-//            LocalizacaoView(coordinate: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384))
-//                .tabItem {
-//                    Image(systemName: "map")
-////                    Image(systemName: "questionmark.circle")
-//                    Text("Localização")
-//                }
+            LocalizacaoFDView()
+                .tabItem {
+                    Image(systemName: "map")
+//                    Image(systemName: "questionmark.circle")
+                    Text("Localização")
+                }
             InfoView()
                 .tabItem {
                     Image(systemName: "info.circle")
