@@ -48,6 +48,7 @@
 		DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGrandeAnimalView.swift; sourceTree = "<group>"; };
 		DD62690F283660CB00781CEF /* BuscaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaView.swift; sourceTree = "<group>"; };
 		DD62691128367A8100781CEF /* LocalizacaoFDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoFDView.swift; sourceTree = "<group>"; };
+		DD626913283686A700781CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DDEA7846282C867900F958F0 /* Passaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passaro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +82,7 @@
 		DD6268D9282BE3AB00781CEF /* BirdDex */ = {
 			isa = PBXGroup;
 			children = (
+				DD626913283686A700781CEF /* Info.plist */,
 				DD626900282E811000781CEF /* Service */,
 				DD6268E8282BE3BD00781CEF /* View */,
 				DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */,
@@ -354,9 +356,9 @@
 				DEVELOPMENT_TEAM = 2D837DJ3YC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirdDex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,9 +385,9 @@
 				DEVELOPMENT_TEAM = 2D837DJ3YC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirdDex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
