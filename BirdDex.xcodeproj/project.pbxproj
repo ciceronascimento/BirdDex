@@ -67,6 +67,7 @@
 		DD6268CE282BE3AB00781CEF = {
 			isa = PBXGroup;
 			children = (
+				DD6269142837D7BC00781CEF /* README.md */,
 				DD6268D9282BE3AB00781CEF /* BirdDex */,
 				DD6268D8282BE3AB00781CEF /* Products */,
 			);
@@ -91,7 +92,6 @@
 				DDEA7845282C865700F958F0 /* Model */,
 				DD6268DE282BE3AD00781CEF /* Assets.xcassets */,
 				DD6268E0282BE3AD00781CEF /* Preview Content */,
-				DD6269142837D7BC00781CEF /* README.md */,
 			);
 			path = BirdDex;
 			sourceTree = "<group>";
