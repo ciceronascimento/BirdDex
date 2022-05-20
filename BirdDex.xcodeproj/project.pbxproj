@@ -49,6 +49,7 @@
 		DD62690F283660CB00781CEF /* BuscaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaView.swift; sourceTree = "<group>"; };
 		DD62691128367A8100781CEF /* LocalizacaoFDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoFDView.swift; sourceTree = "<group>"; };
 		DD626913283686A700781CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DD6269142837D7BC00781CEF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DDEA7846282C867900F958F0 /* Passaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passaro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +91,7 @@
 				DDEA7845282C865700F958F0 /* Model */,
 				DD6268DE282BE3AD00781CEF /* Assets.xcassets */,
 				DD6268E0282BE3AD00781CEF /* Preview Content */,
+				DD6269142837D7BC00781CEF /* README.md */,
 			);
 			path = BirdDex;
 			sourceTree = "<group>";
