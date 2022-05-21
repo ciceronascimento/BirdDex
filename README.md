@@ -1,7 +1,7 @@
 
 # BirdDex
 
-Uma aplicativo com um catalogo de aves baseado na Pokedex
+Um aplicativo com um catalogo de aves baseado na Pokedex
 
 ## Authors
 
