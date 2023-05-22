@@ -14,5 +14,4 @@ enum Background: String {
     case backDeserto
     case backExtinto
     case backNeve
-    
 }

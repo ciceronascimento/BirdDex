@@ -24,10 +24,8 @@ struct SwiftUIView: View {
                         .scale(1.5, anchor: .init(x: 0.2, y: 0.2))
                         .fill(Color.white.opacity(0.25))
                 )
-            
                 .frame(width: 100, height: 100)
         }
-        
         .overlay(alignment: .leading) {
             VStack(alignment: .leading) {
                 Text("nomePassaro")
@@ -35,8 +33,7 @@ struct SwiftUIView: View {
                     .foregroundColor(.white)
                     .padding(.top)
                     .padding(.leading)
-//                    .foregroundColor(.white)
-                
+
                 Text("Alimento")
                     .font(.subheadline).bold()
                     .foregroundColor(.white)
@@ -56,13 +53,6 @@ struct SwiftUIView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .fill(Color.white.opacity(0.25))
                     )
-//                    .frame(width: 100, height: 24)
-//                RoundedRectangle(cornerRadius: 10)
-//                    .fill(.green)
-//                    .frame(width: 100, height: 20)
-//                RoundedRectangle(cornerRadius: 10)
-//                    .fill(.green)
-//                    .frame(width: 100, height: 20)
             }
         }
     }

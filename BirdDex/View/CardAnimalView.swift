@@ -7,39 +7,35 @@
 
 import SwiftUI
 
-
-
 struct CardAnimalView: View {
-    
+
     var passaro: Passaro
-    
-    @State private var selectedMaterial:Material = .regularMaterial
+
+    @State private var selectedMaterial: Material = .regularMaterial
     @State var mostrarSheet = false
-    
-    
+
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dismissSearch) private var dismissSearch
 
-    
     var body: some View {
-        
+
         Button {
             self.mostrarSheet = true
             dismiss()
             dismissSearch()
         }
-    
+
         label: {
-            ZStack{
-                VStack(alignment: .leading){
+            ZStack {
+                VStack(alignment: .leading) {
                     Text(passaro.nome)
                         .lineLimit(1)
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding(.top)
                         .padding(.leading)
-                    
-                    HStack(){
+
+                    HStack {
                         Text(passaro.tipo)
                             .font(.subheadline).bold()
                             .foregroundColor(.white)
@@ -52,7 +48,7 @@ struct CardAnimalView: View {
                             )
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(width: 100, height: 24)
-                        
+
                         Image(passaro.nomeImagem)
                             .resizable()
                             .scaledToFit()

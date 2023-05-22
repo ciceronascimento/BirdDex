@@ -15,11 +15,9 @@
 		DD6268DF282BE3AD00781CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6268DE282BE3AD00781CEF /* Assets.xcassets */; };
 		DD6268E2282BE3AD00781CEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6268E1282BE3AD00781CEF /* Preview Assets.xcassets */; };
 		DD6268EA282BE3D400781CEF /* CatalogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268E9282BE3D400781CEF /* CatalogoView.swift */; };
-		DD6268EC282BE3EB00781CEF /* FavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268EB282BE3EB00781CEF /* FavoritosView.swift */; };
 		DD6268F0282BEA4900781CEF /* CardAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268EF282BEA4900781CEF /* CardAnimalView.swift */; };
 		DD6268F4282D25A800781CEF /* PerfilPassaroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268F3282D25A800781CEF /* PerfilPassaroView.swift */; };
 		DD6268FA282D318E00781CEF /* Habitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268F9282D318E00781CEF /* Habitat.swift */; };
-		DD6268FC282D33F700781CEF /* Caracteristica.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268FB282D33F700781CEF /* Caracteristica.swift */; };
 		DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268FE282D44A300781CEF /* SwiftUIView.swift */; };
 		DD626902282E814200781CEF /* PassarosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD626901282E814200781CEF /* PassarosService.swift */; };
 		DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */; };
@@ -38,11 +36,9 @@
 		DD6268DE282BE3AD00781CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD6268E1282BE3AD00781CEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD6268E9282BE3D400781CEF /* CatalogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoView.swift; sourceTree = "<group>"; };
-		DD6268EB282BE3EB00781CEF /* FavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosView.swift; sourceTree = "<group>"; };
 		DD6268EF282BEA4900781CEF /* CardAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimalView.swift; sourceTree = "<group>"; };
 		DD6268F3282D25A800781CEF /* PerfilPassaroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPassaroView.swift; sourceTree = "<group>"; };
 		DD6268F9282D318E00781CEF /* Habitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habitat.swift; sourceTree = "<group>"; };
-		DD6268FB282D33F700781CEF /* Caracteristica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caracteristica.swift; sourceTree = "<group>"; };
 		DD6268FE282D44A300781CEF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		DD626901282E814200781CEF /* PassarosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassarosService.swift; sourceTree = "<group>"; };
 		DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGrandeAnimalView.swift; sourceTree = "<group>"; };
@@ -110,7 +106,6 @@
 				DD6268E9282BE3D400781CEF /* CatalogoView.swift */,
 				DD6268EF282BEA4900781CEF /* CardAnimalView.swift */,
 				DD6268FE282D44A300781CEF /* SwiftUIView.swift */,
-				DD6268EB282BE3EB00781CEF /* FavoritosView.swift */,
 				DD6268F3282D25A800781CEF /* PerfilPassaroView.swift */,
 				DD62690F283660CB00781CEF /* BuscaView.swift */,
 				DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */,
@@ -134,7 +129,6 @@
 			children = (
 				DDEA7846282C867900F958F0 /* Passaro.swift */,
 				DD6268F9282D318E00781CEF /* Habitat.swift */,
-				DD6268FB282D33F700781CEF /* Caracteristica.swift */,
 				DD3E26622832DE03006DDC72 /* Background.swift */,
 			);
 			path = Model;
@@ -150,6 +144,7 @@
 				DD6268D3282BE3AB00781CEF /* Sources */,
 				DD6268D4282BE3AB00781CEF /* Frameworks */,
 				DD6268D5282BE3AB00781CEF /* Resources */,
+				DD42B39D2A1BB27300B0AEF9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -205,6 +200,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DD42B39D2A1BB27300B0AEF9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD6268D3282BE3AB00781CEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -214,7 +229,6 @@
 				DD6268DD282BE3AB00781CEF /* ContentView.swift in Sources */,
 				DD6268EA282BE3D400781CEF /* CatalogoView.swift in Sources */,
 				DD626910283660CB00781CEF /* BuscaView.swift in Sources */,
-				DD6268EC282BE3EB00781CEF /* FavoritosView.swift in Sources */,
 				DD6268F4282D25A800781CEF /* PerfilPassaroView.swift in Sources */,
 				DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */,
 				DD3E266128313858006DDC72 /* InfoView.swift in Sources */,
@@ -224,7 +238,6 @@
 				DD6268FA282D318E00781CEF /* Habitat.swift in Sources */,
 				DD4182EB282F13800079B592 /* LocalizacaoView.swift in Sources */,
 				DD6268DB282BE3AB00781CEF /* BirdDexApp.swift in Sources */,
-				DD6268FC282D33F700781CEF /* Caracteristica.swift in Sources */,
 				DDEA7847282C867900F958F0 /* Passaro.swift in Sources */,
 				DD3E26632832DE03006DDC72 /* Background.swift in Sources */,
 			);

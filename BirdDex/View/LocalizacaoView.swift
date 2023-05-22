@@ -10,37 +10,32 @@ import MapKit
 import CoreLocation
 
 struct LocalizacaoView: View {
-//
-//    @State var latitudePadrao = -3.7627579
-//    @State var longeitudePadrao = -38.5692384
-//    @State var latitudeDeltaPadrao = 150
-//    @State var longitudeDeltaPadrao = 150
-//
-    var passaro:Passaro
+
+    var passaro: Passaro
     var coordinate: CLLocationCoordinate2D
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384), span: MKCoordinateSpan(latitudeDelta: 150, longitudeDelta: 150))
-    
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -3.7627579,
+                                                                                  longitude: -38.5692384),
+                                                   span: MKCoordinateSpan(latitudeDelta: 150,
+                                                                          longitudeDelta: 150))
     var body: some View {
-        NavigationView{
-            VStack(alignment: .leading){
-                
-//                List{
-                Section{
+        NavigationView {
+            VStack(alignment: .leading) {
+                Section {
                     Map(coordinateRegion: $region)
                         .frame(width: 360, height: 500)
-                        .onAppear{
+                        .onAppear {
                             setRegion(coordinate)
                         }
                         .overlay(
-                            ZStack(alignment: .center){
+                            ZStack(alignment: .center) {
                                 Rectangle()
                                     .foregroundColor(.white.opacity(0.01))
                                 Circle()
                                     .scale(0.7, anchor: .center)
                                     .foregroundColor(passaro.habitat.color)
                                 .opacity(0.2)
-                                .overlay{
-                                    VStack{
+                                .overlay {
+                                    VStack {
                                         Image(passaro.nomeImagem)
                                             .resizable()
                                             .scaledToFit()
@@ -65,6 +60,8 @@ struct LocalizacaoView: View {
 struct LocalizacaoView_Previews: PreviewProvider {
     static var previews: some View {
         let testService = PassarosService().passaros[1]
-        LocalizacaoView(passaro: testService, coordinate: CLLocationCoordinate2D(latitude: -3.7627579, longitude: -38.5692384))
+        LocalizacaoView(passaro: testService,
+                        coordinate: CLLocationCoordinate2D(latitude: -3.7627579,
+                                                           longitude: -38.5692384))
     }
 }

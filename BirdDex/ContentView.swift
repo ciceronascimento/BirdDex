@@ -8,8 +8,6 @@
 import SwiftUI
 import MapKit
 
-
-
 struct ContentView: View {
     var body: some View {
         TabView {
@@ -18,11 +16,10 @@ struct ContentView: View {
                     Image(systemName: "binoculars")
                     Text("Descobrir")
                 }
-            LocalizacaoFDView()
+            Text("Identificar aqui")
                 .tabItem {
-                    Image(systemName: "map")
-//                    Image(systemName: "questionmark.circle")
-                    Text("Localização")
+                    Image(systemName: "camera.fill")
+                    Text("Identificar")
                 }
             InfoView()
                 .tabItem {
