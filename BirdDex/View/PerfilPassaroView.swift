@@ -10,6 +10,12 @@ import MapKit
 
 struct PerfilPassaroView: View {
 
+    // Strings
+    let family = NSLocalizedString("family", comment: "")
+    let habitat = NSLocalizedString("habitat", comment: "")
+    let food = NSLocalizedString("food", comment: "")
+    let location = NSLocalizedString("location", comment: "")
+
     var passaro: Passaro
     var body: some View {
 
@@ -18,7 +24,6 @@ struct PerfilPassaroView: View {
                 VStack(alignment: .center) {
                     Spacer()
                     RoundedRectangle(cornerRadius: 40)
-    //                    .size(width: 360 , height: 1000)
                         .foregroundColor(.white)
                         .scaledToFit()
                         .padding()
@@ -43,9 +48,10 @@ struct PerfilPassaroView: View {
                     VStack(alignment: .leading) {
                         Section {
                             HStack {
-                                Text("Tipo:")
+                                Text("\(family): ")
                                     .font(.title2)
                                     .foregroundColor(.black)
+                                    .bold()
                                 Text(passaro.tipo)
                                     .font(.subheadline).bold()
                                     .foregroundColor(passaro.habitat.color)
@@ -58,18 +64,24 @@ struct PerfilPassaroView: View {
                                     .frame(width: 100, height: 24)
                             }
                             HStack {
-                                Text("Habitat: \(passaro.habitat.rawValue)")
+                                Text("\(habitat): ")
+                                    .font(.title2)
+                                    .bold()
+                                    .foregroundColor(.black)
+                                Text("\(passaro.habitat.rawValue)")
                                     .font(.title2)
                                     .foregroundColor(.black)
                             }
                             .padding(.bottom, 1)
                             HStack {
-                                Text("Alimentação:")
+                                Text("\(food): ")
                                     .font(.title2)
+                                    .bold()
                                     .foregroundColor(.black)
                                 Text("Onivoro")
                                     .font(.title2)
                                     .foregroundColor(.black)
+
                             }
                         }
                         .padding(.horizontal, -50)
@@ -81,12 +93,12 @@ struct PerfilPassaroView: View {
                         LocalizacaoView(passaro: passaro,
                                         coordinate: CLLocationCoordinate2D(latitude: passaro.latitudePassaro,
                                                                            longitude: passaro.longigudePassaro))
-                    }) {
-                        Text("Localizar")
+                    }, label: {
+                        Text("\(location)")
                             .foregroundColor(.white)
                             .buttonStyle(.borderedProminent)
                             .controlSize(.regular)
-                    }
+                    })
                     .padding()
                     .background(passaro.habitat.color)
                     .clipShape(Capsule())

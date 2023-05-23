@@ -9,10 +9,13 @@ import SwiftUI
 
 struct CardGrandeAnimalView: View {
 
-        var passaro: Passaro
+    // Strings
+    let closeWindow = "Fechar"
 
-        @State private var selectedMaterial: Material = .regularMaterial
-        @State var showingSheet = false
+    var passaro: Passaro
+
+    @State private var selectedMaterial: Material = .regularMaterial
+    @State var showingSheet = false
 
     var body: some View {
         Button {
@@ -52,26 +55,23 @@ struct CardGrandeAnimalView: View {
                 }
 
                 .sheet(isPresented: $showingSheet) {
-                        NavigationView {
-                            PerfilPassaroView(passaro: passaro)
-                                .toolbar {
-                                    ToolbarItem(placement: .primaryAction) {
-                                        Button(action: {
-                                            self.showingSheet = false
-                                        }) {
-                                            Text("Fechar")
-                                                .fontWeight(.semibold)
-                                                .foregroundColor(.white)
-                                        }
-                                    }
-                                }
-                        }
-                    }
+                    NavigationView {
+                        PerfilPassaroView(passaro: passaro)
+                            .toolbar {
+                                ToolbarItem(placement: .primaryAction) {
 
+                                    Button(action: {self.showingSheet = false},
+                                           label: {                                            Text(closeWindow)
+                                                .fontWeight(.semibold)
+                                                .foregroundColor(.white)})
+                                }
+                            }
+                    }
+                }
             }
             .background(
                 Image(passaro.background.rawValue)
-                .resizable()
+                    .resizable()
             )
             .cornerRadius(12)
             .padding([.bottom, .horizontal], 2.5)

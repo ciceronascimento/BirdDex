@@ -9,22 +9,28 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
+
+    // Strings
+    let discoverMenu = NSLocalizedString("discover_menu", comment: "")
+    let identifyMenu = NSLocalizedString("identify_menu", comment: "")
+    let infoMenu = NSLocalizedString("info_menu", comment: "")
+
     var body: some View {
         TabView {
             CatalogoView()
                 .tabItem {
                     Image(systemName: "binoculars")
-                    Text("Descobrir")
+                    Text(discoverMenu)
                 }
-            Text("Identificar aqui")
+            IdentifyView()
                 .tabItem {
                     Image(systemName: "camera.fill")
-                    Text("Identificar")
+                    Text(identifyMenu)
                 }
             InfoView()
                 .tabItem {
                     Image(systemName: "info.circle")
-                    Text("info")
+                    Text(infoMenu)
                 }
         }
         .font(.headline)

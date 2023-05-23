@@ -9,6 +9,11 @@ import SwiftUI
 
 struct CatalogoView: View {
 
+    // Strings
+    let title = NSLocalizedString("title", comment: "")
+    let subTitle1 = NSLocalizedString("sub_title1", comment: "")
+    let subTitle2 = NSLocalizedString("sub_title2", comment: "")
+
     var passaros = PassarosService().passaros
     let passarosDestaque = PassarosService().passaros
     let alignment: VerticalAlignment = .top
@@ -21,7 +26,7 @@ struct CatalogoView: View {
             VStack(alignment: .leading) {
                 ScrollView(.vertical) {
                     HStack {
-                        Text("Destaques")
+                        Text(subTitle1)
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 15)
@@ -36,7 +41,7 @@ struct CatalogoView: View {
                         }
                     }
                     HStack {
-                        Text("Catálogo")
+                        Text(subTitle2)
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 15)
@@ -50,8 +55,8 @@ struct CatalogoView: View {
                         }
                     }
                 }
-                .navigationTitle("Descobrir")
-                .searchable(text: $busca, placement: .navigationBarDrawer(displayMode: .always)) {
+                .navigationTitle(title)
+                .searchable(text: $busca, placement: .navigationBarDrawer(displayMode: .always), prompt: "") {
                     BuscaView(nomesFIltrados: nomesFiltrados)
                 }
             }

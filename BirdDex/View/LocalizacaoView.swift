@@ -11,6 +11,9 @@ import CoreLocation
 
 struct LocalizacaoView: View {
 
+    // Strings
+    let location = "Localizar"
+
     var passaro: Passaro
     var coordinate: CLLocationCoordinate2D
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -3.7627579,
@@ -48,7 +51,7 @@ struct LocalizacaoView: View {
                 .cornerRadius(20)
                 .headerProminence(.increased)
             }
-            .navigationTitle("Localização")
+            .navigationTitle(location)
             .navigationBarTitleDisplayMode(.automatic)
         }
     }

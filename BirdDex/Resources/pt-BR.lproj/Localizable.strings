@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  BirdDex
+
+  Created by Cicero Nascimento on 23/05/23.
+  
+*/
+
+"title" = "Descobrir";
+"sub_title1" = "Destaques";
+"sub_title2" = "Catálogo";
+
+// popUps
+"close_window" = "Fechar";
+
+// perfil birds
+"family" = "Tipo";
+"habitat" = "Habitat";
+"food" = "Alimentação";
+"location" = "Localizar";
+
+// tabview
+"discover_menu" = "Descobrir";
+"identify_menu" = "Identificar";
+"info_menu" = "info";

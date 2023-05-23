@@ -9,6 +9,10 @@ import SwiftUI
 
 struct CardAnimalView: View {
 
+    // Strings
+    
+    let closeWindow = NSLocalizedString("close_window", comment: "")
+
     var passaro: Passaro
 
     @State private var selectedMaterial: Material = .regularMaterial
@@ -69,18 +73,18 @@ struct CardAnimalView: View {
                     PerfilPassaroView(passaro: passaro)
                         .toolbar {
                             ToolbarItem(placement: .primaryAction) {
+
                                 Button(action: {
                                     self.mostrarSheet = false
-                                }) {
+                                }, label: {
                                     Text("Fechar")
                                         .fontWeight(.semibold)
-                                        .foregroundColor(.white)   
-                                }
+                                        .foregroundColor(.white)
+                                })
                             }
 
                         }
                 }
-
             }
             .background(passaro.habitat.color)
             .cornerRadius(12)

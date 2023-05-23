@@ -16,7 +16,6 @@ struct LocalizacaoFDView: View {
                                                                           longitudeDelta: 150))
     @State private var showingAlert: Bool = false
     private var alertTitle: String = "Obrigado pelo seu interesse!"
-    private var alertMessage: String = "Localizar pássaros pelo mapa mundo é uma feature que ainda não esta pronta. Nós avisaremos quando for terminada!"
     var body: some View {
 
         Button {
@@ -29,7 +28,7 @@ struct LocalizacaoFDView: View {
         }.alert(Text(alertTitle), isPresented: $showingAlert, actions: {
             Button("Ok", role: .cancel) { }
         }, message: {
-            Text(alertMessage)
+            Text(alertTitle)
             }
         )
     }
