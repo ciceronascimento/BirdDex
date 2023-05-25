@@ -13,6 +13,11 @@
 		DD42B3A12A1CFFD900B0AEF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD42B3A32A1CFFD900B0AEF9 /* Localizable.strings */; };
 		DD42B3A62A1D042100B0AEF9 /* IdentifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3A52A1D042100B0AEF9 /* IdentifyView.swift */; };
 		DD42B3A92A1D060C00B0AEF9 /* IdentifyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3A82A1D060C00B0AEF9 /* IdentifyButton.swift */; };
+		DD42B3AC2A1E418E00B0AEF9 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3AB2A1E418E00B0AEF9 /* CameraViewModel.swift */; };
+		DD42B3B22A1E501200B0AEF9 /* ObservedBirds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3B12A1E501200B0AEF9 /* ObservedBirds.swift */; };
+		DD42B3B42A1E52BB00B0AEF9 /* MyBirds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3B32A1E52BB00B0AEF9 /* MyBirds.swift */; };
+		DD42B3B82A1F8AEA00B0AEF9 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3B72A1F8AEA00B0AEF9 /* CategoryView.swift */; };
+		DD42B3BA2A1F8EF500B0AEF9 /* CellCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42B3B92A1F8EF500B0AEF9 /* CellCategoryView.swift */; };
 		DD6268DB282BE3AB00781CEF /* BirdDexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */; };
 		DD6268DD282BE3AB00781CEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6268DC282BE3AB00781CEF /* ContentView.swift */; };
 		DD6268DF282BE3AD00781CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6268DE282BE3AD00781CEF /* Assets.xcassets */; };
@@ -37,6 +42,11 @@
 		DD42B3A42A1D008300B0AEF9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DD42B3A52A1D042100B0AEF9 /* IdentifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyView.swift; sourceTree = "<group>"; };
 		DD42B3A82A1D060C00B0AEF9 /* IdentifyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyButton.swift; sourceTree = "<group>"; };
+		DD42B3AB2A1E418E00B0AEF9 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		DD42B3B12A1E501200B0AEF9 /* ObservedBirds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedBirds.swift; sourceTree = "<group>"; };
+		DD42B3B32A1E52BB00B0AEF9 /* MyBirds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBirds.swift; sourceTree = "<group>"; };
+		DD42B3B72A1F8AEA00B0AEF9 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		DD42B3B92A1F8EF500B0AEF9 /* CellCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCategoryView.swift; sourceTree = "<group>"; };
 		DD6268D7282BE3AB00781CEF /* BirdDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6268DA282BE3AB00781CEF /* BirdDexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDexApp.swift; sourceTree = "<group>"; };
 		DD6268DC282BE3AB00781CEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,8 +93,17 @@
 				DD62690F283660CB00781CEF /* BuscaView.swift */,
 				DD626903282E9A0900781CEF /* CardGrandeAnimalView.swift */,
 				DD42B3A82A1D060C00B0AEF9 /* IdentifyButton.swift */,
+				DD42B3B92A1F8EF500B0AEF9 /* CellCategoryView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DD42B3AA2A1E416A00B0AEF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD42B3AB2A1E418E00B0AEF9 /* CameraViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DD6268CE282BE3AB00781CEF = {
@@ -107,6 +126,7 @@
 		DD6268D9282BE3AB00781CEF /* BirdDex */ = {
 			isa = PBXGroup;
 			children = (
+				DD42B3AA2A1E416A00B0AEF9 /* ViewModel */,
 				DD626913283686A700781CEF /* Info.plist */,
 				DD626900282E811000781CEF /* Service */,
 				DD6268E8282BE3BD00781CEF /* View */,
@@ -138,6 +158,7 @@
 				DD3E266028313858006DDC72 /* InfoView.swift */,
 				DD62691128367A8100781CEF /* LocalizacaoFDView.swift */,
 				DD42B3A52A1D042100B0AEF9 /* IdentifyView.swift */,
+				DD42B3B72A1F8AEA00B0AEF9 /* CategoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DD626901282E814200781CEF /* PassarosService.swift */,
+				DD42B3B12A1E501200B0AEF9 /* ObservedBirds.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -156,6 +178,7 @@
 				DDEA7846282C867900F958F0 /* Passaro.swift */,
 				DD6268F9282D318E00781CEF /* Habitat.swift */,
 				DD3E26622832DE03006DDC72 /* Background.swift */,
+				DD42B3B32A1E52BB00B0AEF9 /* MyBirds.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,15 +281,20 @@
 				DD6268EA282BE3D400781CEF /* CatalogoView.swift in Sources */,
 				DD626910283660CB00781CEF /* BuscaView.swift in Sources */,
 				DD42B3A62A1D042100B0AEF9 /* IdentifyView.swift in Sources */,
+				DD42B3AC2A1E418E00B0AEF9 /* CameraViewModel.swift in Sources */,
 				DD6268F4282D25A800781CEF /* PerfilPassaroView.swift in Sources */,
 				DD626904282E9A0900781CEF /* CardGrandeAnimalView.swift in Sources */,
+				DD42B3B82A1F8AEA00B0AEF9 /* CategoryView.swift in Sources */,
 				DD3E266128313858006DDC72 /* InfoView.swift in Sources */,
+				DD42B3BA2A1F8EF500B0AEF9 /* CellCategoryView.swift in Sources */,
 				DD62691228367A8100781CEF /* LocalizacaoFDView.swift in Sources */,
 				DD6268FF282D44A300781CEF /* SwiftUIView.swift in Sources */,
 				DD6268F0282BEA4900781CEF /* CardAnimalView.swift in Sources */,
 				DD6268FA282D318E00781CEF /* Habitat.swift in Sources */,
 				DD42B3A92A1D060C00B0AEF9 /* IdentifyButton.swift in Sources */,
+				DD42B3B22A1E501200B0AEF9 /* ObservedBirds.swift in Sources */,
 				DD4182EB282F13800079B592 /* LocalizacaoView.swift in Sources */,
+				DD42B3B42A1E52BB00B0AEF9 /* MyBirds.swift in Sources */,
 				DD6268DB282BE3AB00781CEF /* BirdDexApp.swift in Sources */,
 				DDEA7847282C867900F958F0 /* Passaro.swift in Sources */,
 				DD3E26632832DE03006DDC72 /* Background.swift in Sources */,
@@ -339,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -394,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

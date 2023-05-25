@@ -10,7 +10,6 @@ import SwiftUI
 struct CardAnimalView: View {
 
     // Strings
-    
     let closeWindow = NSLocalizedString("close_window", comment: "")
 
     var passaro: Passaro

@@ -27,7 +27,8 @@ struct ContentView: View {
                     Image(systemName: "camera.fill")
                     Text(identifyMenu)
                 }
-            InfoView()
+//            InfoView()
+            CategoryView()
                 .tabItem {
                     Image(systemName: "info.circle")
                     Text(infoMenu)

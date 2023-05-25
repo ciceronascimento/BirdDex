@@ -30,6 +30,7 @@ struct CatalogoView: View {
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 15)
+                        Spacer()
                     }
                     ScrollView(.horizontal) {
                         HStack {
@@ -39,12 +40,14 @@ struct CatalogoView: View {
                                         }
                             }
                         }
+
                     }
                     HStack {
                         Text(subTitle2)
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 15)
+                        Spacer()
                     }
                     LazyVGrid(columns: Array(repeating: .init(.flexible(),
                                                               spacing: espacosGrid),

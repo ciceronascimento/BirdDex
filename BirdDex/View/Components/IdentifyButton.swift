@@ -9,10 +9,20 @@ import SwiftUI
 
 struct IdentifyButton: View {
     var body: some View {
-        Text("Teste")
-            .foregroundColor(.white)
-            .buttonStyle(.borderedProminent)
+        Button(action: { print(
+            "teste")},
+               label: {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.white)
+                Text("Identificar")
+                    .foregroundColor(.white)
+            }
             .controlSize(.regular)
+            .padding()
+            .background(Color.cyan)
+            .clipShape(Capsule())
+        })
     }
 }
 
