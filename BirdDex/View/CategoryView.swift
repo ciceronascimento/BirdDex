@@ -8,18 +8,13 @@
 import SwiftUI
 
 struct CategoryView: View {
-    let categoryTitle: String = "Category title"
-
     var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    ForEach(0..<10) { _ in
-                        CellCategoryView()
-//                            .listRowBackground(Color.cyan)
-                    }
-                }.listStyle(.automatic)
-            }.navigationTitle(categoryTitle)
+        VStack {
+            List {
+                ForEach(0..<10) { _ in
+                    CellCategoryView()
+                }
+            }.listStyle(.automatic)
         }
     }
 }

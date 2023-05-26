@@ -19,7 +19,7 @@ struct CardGrandeAnimalView: View {
 
     var body: some View {
         Button {
-            self.showingSheet = true
+//            self.showingSheet = true
         } label: {
             ZStack {
 

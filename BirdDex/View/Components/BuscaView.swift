@@ -15,7 +15,7 @@ struct BuscaView: View {
 
             ForEach(nomesFIltrados, id: \.self) { passaro in
 //                            passarosArray.append(passaro)
-                CardAnimalView(passaro: passaro)
+                CardAnimalView(category: passaro)
             }
         }
     }

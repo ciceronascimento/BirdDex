@@ -32,7 +32,7 @@ struct IdentifyView: View {
                                                  count: colunas),
                                   spacing: espacosGrid) {
                             ForEach(identified, id: \.self) { bird in
-                                CardAnimalView(passaro: bird)
+                                CardAnimalView(category: bird)
                             }
                         }
                     }

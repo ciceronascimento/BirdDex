@@ -18,8 +18,6 @@ struct PerfilPassaroView: View {
 
     var passaro: Passaro
     var body: some View {
-
-        NavigationView {
             ZStack {
                 VStack(alignment: .center) {
                     Spacer()
@@ -89,25 +87,11 @@ struct PerfilPassaroView: View {
 
                 }
                 VStack {
-                    NavigationLink(destination: {
-                        LocalizacaoView(passaro: passaro,
-                                        coordinate: CLLocationCoordinate2D(latitude: passaro.latitudePassaro,
-                                                                           longitude: passaro.longigudePassaro))
-                    }, label: {
-                        Text("\(location)")
-                            .foregroundColor(.white)
-                            .buttonStyle(.borderedProminent)
-                            .controlSize(.regular)
-                    })
-                    .padding()
-                    .background(passaro.habitat.color)
-                    .clipShape(Capsule())
+
                 }
                 .padding(.top, 300)
             }
         }
-        .navigationBarTitle("", displayMode: .inline)
-    }
 }
 
 struct PerfilPassaroView_Previews: PreviewProvider {

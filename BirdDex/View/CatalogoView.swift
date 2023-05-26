@@ -54,7 +54,7 @@ struct CatalogoView: View {
                                              count: colunas),
                               spacing: espacosGrid) {
                         ForEach(nomesFiltrados, id: \.self) { passaro in
-                            CardAnimalView(passaro: passaro)
+                            CardAnimalView(category: passaro)
                         }
                     }
                 }
