@@ -15,6 +15,8 @@ struct CatalogoView: View {
     let subTitle2 = NSLocalizedString("sub_title2", comment: "")
 
     var passaros = PassarosService().passaros
+    var category = CategoryService().categoryBirds
+
     let passarosDestaque = PassarosService().passaros
     let alignment: VerticalAlignment = .top
     @State private var busca = ""
@@ -53,8 +55,8 @@ struct CatalogoView: View {
                                                               spacing: espacosGrid),
                                              count: colunas),
                               spacing: espacosGrid) {
-                        ForEach(nomesFiltrados, id: \.self) { passaro in
-                            CardAnimalView(category: passaro)
+                        ForEach(nomesFiltrados, id: \.self) { bird in
+                            BirdCardView(category: bird)
                         }
                     }
                 }
@@ -66,11 +68,11 @@ struct CatalogoView: View {
         }
     }
 
-    var nomesFiltrados: [Passaro] {
+    var nomesFiltrados: [Category] {
         if busca.isEmpty {
-            return passaros
+            return category
         } else {
-            return passaros.filter { $0.nome.contains(busca)  }
+            return category.filter { $0.name.contains(busca)  }
         }
     }
 }

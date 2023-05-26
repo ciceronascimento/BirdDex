@@ -8,13 +8,11 @@
 import Foundation
 import MapKit
 
-struct MyBirds: Hashable {
+struct UserBirds: Hashable {
     let id: UUID
     let nome: String
     let nomeImagem: UIImage
     let tipo: String
     let habitat: Habitat
     let background: Background
-    let latitudePassaro: CLLocationDegrees
-    let longigudePassaro: CLLocationDegrees
 }
